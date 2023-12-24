@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+    <script>
+        function quadratic_equation() {
+            let spaceYear = document.qef.a.value;
+
+            let sol = document.getElementById("qe_sol");
+
+            if (spaceYear != 1961) {
+                string = "Ви помилилися." + "\nПерший успішний політ був і 1961 році";
+
+            } else {
+                string = "Молодець";
+            }
+
+            sol.innerHTML = string;
+        }
+    </script>
+    <div>
+        <div class="form_stile">
+            <p>
+                В якому році перша людина полетіла у космос ?
+            </p>
+            <form name="qef" action="javascript:quadratic_equation()">
+                <input class="cqe" name="a" type="text" value="1" size="4" />
+                <input class="btn" type="submit" value="Розрахувати" />
+                <input class="btn" type="reset" name="reset" value="Reset" />
+            </form>
+
+            <span id="qe_sol">Перевірити </span>
+        </div>
+    </div>
+</body>
+
+</html>

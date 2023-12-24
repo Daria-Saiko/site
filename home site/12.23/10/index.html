@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wolf</title>
+    <style type="text/css">
+        body {
+            font-size: 50px;
+            color: rgb(255, 255, 0);
+            background-color: black;
+            text-align: center;
+        }
+
+        #train {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+
+    <!-- <canvas id="rects">Накладання прямокутників</canvas> -->
+    <!-- <script>
+        let canvas = document.getElementById("rects");
+        let cxt = canvas.getContext("2d");
+        canvas.height = 200;
+        canvas.width = 300;
+        cxt.fillStyle = "rgb(200, 0, 0)";
+        cxt.fillRect(15, 15, 100, 100);
+        cxt.fillStyle = "rgb(0, 200, 0)";
+        cxt.fillRect(30, 30, 100, 100);
+        cxt.fillStyle = "rgb(0, 0, 200)";
+        cxt.fillRect(45, 45, 100, 100);
+    </script> -->
+
+    <!-- <canvas id="myCanvas" width="500" height="200"></canvas> -->
+    <!-- <script>
+        let canvas = document.getElementById("myCanvas"),
+            cxt = canvas.getContext("2d");
+        cxt.strokeStyle = "red";
+        cxt.setLineDash([15, 5]);
+        cxt.strokeRect(40, 40, 100, 100);
+        cxt.strokeStyle = "blue";
+        cxt.setLineDash([2, 5, 6]);
+        cxt.strokeRect(180, 40, 100, 100);
+        cxt.strokeStyle = "green";
+        cxt.setLineDash([2, 2]);
+        cxt.strokeRect(320, 40, 100, 100);
+    </script> -->
+    <!-- <script>
+        let canvas = document.getElementById("myCanvas"),
+            cxt = canvas.getContext("2d");
+        cxt.strokeStyle = "red";
+        cxt.fillStyle = "blue";
+        cxt.lineWidth = 15;
+        cxt.lineJoin = "miter";
+        cxt.strokeRect(40, 40, 100, 100);
+        cxt.lineJoin = "bevel";
+        cxt.strokeRect(180, 40, 100, 100);
+        cxt.lineJoin = "round";
+        cxt.strokeRect(320, 40, 100, 100);
+    </script> -->
+    <canvas id="myCanvas" width="500" height="800"></canvas>
+    <img id="train" src="train.gif">
+    <script>
+        train.onclick = function () {
+            let start = Date.now(); // зберегти час початку
+            let timer = setInterval(function () {
+                // обчислити скільки часу пройшло з opts.duration
+                let timePassed = Date.now() - start;
+                train.style.left = timePassed / 5 + 'px';
+                if (timePassed > 2000) clearInterval(timer);
+            }, 20);
+        }
+
+
+
+        // let canvas = document.getElementById("myCanvas");
+        // let cxt = canvas.getContext("2d");
+
+        // let x = canvas.width / 2;
+        // let y = canvas.height / 2;
+        // let radius = 75;
+        // let startAngle = 1.5 * Math.PI;
+        // let endAngle = 1.1 * Math.PI;
+        // let counterClockwise = true;
+
+
+        // cxt.beginPath();
+        // cxt.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        // cxt.lineWidth = 15;
+
+        // cxt.strokeStyle = "red";
+        // cxt.stroke();
+        // // cxt.beginPath();
+        // // cxt.moveTo(50, 50);
+        // // cxt.lineTo(500, 50);
+        // // cxt.lineWidth = 15;
+        // // cxt.strokeStyle = "#ff0000";
+        // // cxt.lineCap = "butt";
+        // // cxt.stroke();
+
+        // // cxt.beginPath();
+        // // cxt.moveTo(50, 100);
+        // // cxt.lineTo(500, 100);
+        // // cxt.lineWidth = 15;
+        // // cxt.strokeStyle = "#00ff00";
+        // // cxt.lineCap = "round";
+        // // cxt.stroke();
+
+        // // cxt.beginPath();
+        // // cxt.moveTo(50, 150);
+        // // cxt.lineTo(500, 150);
+        // // cxt.lineWidth = 15;
+        // // cxt.strokeStyle = "#0000ff";
+        // // cxt.lineCap = "square";
+        // // cxt.stroke();
+
+        // // cxt.beginPath();
+        // // cxt.moveTo(75, 50);
+        // // cxt.lineTo(100, 75);
+        // // cxt.lineTo(100, 25);
+        // // cxt.fill();
+
+        // // cxt.beginPath();
+        // // cxt.moveTo(435, 250);
+        // // cxt.lineTo(250, 100);
+        // // cxt.lineTo(250, 400);
+        // // cxt.fillStyle = "red";
+        // // cxt.fill();
+    </script>
+</body>
+
+</html>

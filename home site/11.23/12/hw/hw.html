@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkSum(sum) {
+        if (sum > 1000) {
+          return true;
+        } else {
+          return confirm(
+            "Для знижки вам необхідно вибрати ще товарів на сумму більше 1000 грн. Продовжимо?"
+          );
+          return false;
+        }
+      }
+      let sum = 0;
+      while (true) {
+        sum = +prompt("Вкажіть суму покупки?");
+        if (checkSum(sum)) {
+          alert("Знижка 20% забезпечена!");
+          break;
+        } else {
+          sum = +prompt("Вкажіть суму покупки?");
+        }
+      }
+    </script>
+  </body>
+</html>

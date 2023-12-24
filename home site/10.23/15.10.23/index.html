@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      p {
+        color: #000;
+        background-color: yellow;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let answer;
+      let inputN = prompt("Введіть число від 1 до 50", "");
+      let questN = prompt("Вгадайте число від 1 до 50", "");
+      if (+questN > +inputN) {
+        answer = "Ваше число більше";
+      }
+      if (+questN < +inputN) {
+        answer = "Ваше число менше";
+      }
+      if (+questN == +inputN) {
+        answer = "Ви Вгадали!";
+      }
+      alert(answer);
+
+      /*
+      let time = 12,
+        discount = 15;
+      if (time == 12 && discount == 15) {
+        alert("Час для знижок!!!");
+      } else {
+        alert("Приходьте ще");
+      }
+      /*
+      let userAge = +prompt("Скільки вам років? ");
+      if (userAge < 18 || userAge > 100) {
+        alert("Доступ заборонено ");
+      } else {
+        alert("Доступ дозволений  ");
+      }*/
+    </script>
+  </body>
+</html>

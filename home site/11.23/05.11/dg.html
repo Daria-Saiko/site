@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/jscss.css" />
+    <style>
+        p {
+            font-size: 30px;
+            margin: 0;
+            color: rgb(255, 255, 0);
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function quadratic_equation() {
+            for (let i = 1; i <= 10; i++) {
+                for (let j = 1; j <= 10; j++) {
+                    let result = i * j;
+                    document.write("<p>" + i + " * " + j + " = " + result + "</p>");
+                }
+            }
+        }
+    </script>
+    <div class="form_stile">
+        <p>
+            Таблиця множення
+        </p>
+        <form name="qef" action="javascript:quadratic_equation()">
+            <input class="cqe" name="money" type="text" value="1" size="4" style="display: none;" />
+            <input class="btn" type="submit" value="Показати" />
+            <input class="btn" type="reset" name="reset" value="Reset" />
+        </form>
+
+        <span id="qe_sol"></span>
+    </div>
+</body>
+
+</html>

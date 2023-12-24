@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 1
+          let numder = prompt("Назвіть число", "23");
+
+          while (numder < 100 && numder !== null) {
+            alert("Число менше 100, введить ще раз ");
+            numder = prompt("Назвіть число", "23");
+          }
+          if (numder === null) {
+            alert("До побачення!");
+          }
+          if (numder >= 100) {
+            alert("Ваше число: " + numder);
+          }*/
+      let num;
+      let x = 84;
+      let steps = 0;
+      do {
+        num = prompt("Введіть число, від 0 до 100", 0);
+        if (num === null) {
+          alert("До побачення!");
+        } else if (num < x) {
+          alert("Ваше число менше");
+        } else if (num > x) {
+          alert("Ваше число ,більше");
+        } else {
+          alert("Ви вгадали " + num);
+          alert(steps);
+        }
+        steps += 1;
+      } while ((num < x && num != null) || (num > x && num != null));
+    </script>
+  </body>
+</html>

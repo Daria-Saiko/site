@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../css/jscss.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    function quadratic_equation() {
+      let number = document.qef.money.value;
+      let sol = document.getElementById("qe_sol");
+
+      switch (number) {
+        case "1":
+        case "3":
+        case "7":
+        case "15":
+        case "21":
+        case "25":
+        case "31":
+        case "33":
+          sol.innerHTML = number + " це щасливе число";
+          break;
+        case "13":
+          sol.innerHTML = `${number} це не щасливе число`;
+          break;
+        case "666":
+          sol.innerHTML = `${number} це число дьявола`;
+          break;
+        default:
+          sol.innerHTML = "Це звичайне число";
+      }
+    }
+  </script>
+
+  <div>
+    <div class="form_stile">
+      <p>
+        Ведить число
+      </p>
+      <form name="qef" action="javascript:quadratic_equation()">
+        <input class="cqe" name="money" type="text" value="1" size="4" />
+        <input class="btn" type="submit" value="перевірити" />
+        <input class="btn" type="reset" name="reset" value="Reset" />
+      </form>
+
+      <span id="qe_sol"></span>
+    </div>
+  </div>
+</body>
+
+</html>

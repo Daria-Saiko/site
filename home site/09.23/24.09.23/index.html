@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24.09.23</title>
+  <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+  <script>
+    function quadratic_equation() {
+      let a = document.qef.a.value;
+      let b = document.qef.b.value;
+      let sol = document.getElementById("qe_sol");
+      let p, s;
+      p = 2 * (a + b);
+      s = a * b;
+      string = "<p>" + "Піриметр = " + p + "см; площа = " + s + "см;" + "</p>";
+      sol.innerHTML = string;
+    }
+
+  </script>
+  <div>
+    <div class="form_stile">
+      <p>
+        Піриметр та площа рівнобедреного трикутника
+      </p>
+      <form name="qef" action="javascript:quadratic_equation()">
+        a <input class="cqe" name="a" type="text" value="1" size="4" /> b
+        <input class="cqe" name="b" type="text" value="2" size="4" />
+
+        <input class="btn" type="submit" value="Розрахувати" />
+        <input class="btn" type="reset" name="reset" value="Reset" />
+      </form>
+      <p>Рішення:</p>
+      <p>
+        <span id="qe_sol">Введить коефіцієнти та натисніть "Розрахувати"</span>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

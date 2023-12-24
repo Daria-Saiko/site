@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>08.10.23</title>
+  <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+  <script>
+    function quadratic_equation() {
+      let numberOne = document.qef.a.value;
+      let numberTwo = document.qef.b.value;
+      let numberThree = document.qef.c.value;
+      let sol = document.getElementById("qe_sol");
+      let sol2 = document.getElementById("qe_sol2");
+      let sol3 = document.getElementById("qe_sol3");
+      let sol4 = document.getElementById("qe_sol4");
+      let dscreminant = numberTwo * numberTwo - 4 * numberOne * numberThree;
+
+      string3 = ("<p>" + " дискримінант = " + dscreminant + "</p>");
+
+
+      if (dscreminant > 0) {
+        string = "<p>" + " є два " + "</p>";
+        string2 = "<p>" + "x1 = " + (numberTwo * -1 + Math.sqrt(dscreminant)) / (2 * numberOne) + "</p>";
+        string4 = "<p>" +
+          "x2 = " +
+          (numberTwo * -1 - Math.sqrt(dscreminant)) / (2 * numberOne) +
+          "</p>"
+          ;
+      } else if (dscreminant == 0) {
+        string = "<p>" + " є один " + "</p>";
+        string2 =
+          "<p>" +
+          ("x1 = " + (numberTwo * -1 + sqrt(dscreminant)) / 2) * numberOne +
+          "</p>"
+          ;
+      } else {
+        string = "<p>" + " не має " + "</p>";
+      }
+
+      if (numberTwo < 0 && numberThree < 0) {
+        string =
+          "<p>" +
+          numberOne +
+          "x&sup2; - " +
+          +Math.abs(numberTwo) +
+          "x - " +
+          Math.abs(numberThree) +
+          " = 0" +
+          "</p>"
+          ;
+      } else if (numberTwo < 0) {
+        string =
+          "<p>" +
+          numberOne +
+          "x&sup2; - " +
+          +Math.abs(numberTwo) +
+          "x + " +
+          numberThree +
+          " = 0" +
+          "</p>"
+          ;
+      } else if (numberThree < 0) {
+        string =
+          "<p>" +
+          numberOne +
+          "x&sup2; + " +
+          +numberTwo +
+          "x - " +
+          Math.abs(numberThree) +
+          " = 0" +
+          "</p>"
+          ;
+      } else {
+        string =
+          "<p>" +
+          numberOne +
+          "x&sup2; + " +
+          +numberTwo +
+          "x + " +
+          numberThree +
+          " = 0" +
+          "</p>"
+          ;
+      }
+
+      sol.innerHTML = string;
+      sol2.innerHTML = string2;
+      sol3.innerHTML = string3;
+      sol4.innerHTML = string4;
+    }
+  </script>
+  <div>
+    <div class="form_stile">
+      <p>
+        Розв'язок квадратного рівняння a&middot;x&sup2; + b&middot;x + c = 0.
+      </p>
+      <form name="qef" action="javascript:quadratic_equation()">
+        a <input class="cqe" name="a" type="text" value="1" size="4" /> b
+        <input class="cqe" name="b" type="text" value="2" size="4" /> c
+        <input class="cqe" name="c" type="text" value="-3" size="4" />
+        <input class="btn" type="submit" value="Розрахувати" />
+        <input class="btn" type="reset" name="reset" value="Reset" />
+      </form>
+      Рішення:
+      <span id="qe_sol3"></span>
+      <span id="qe_sol">Введить коефіцієнти та натисніть "Розрахувати"</span>
+      <span id="qe_sol2"></span>
+      <span id="qe_sol4"></span>
+    </div>
+  </div>
+</body>
+
+</html>

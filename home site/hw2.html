@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Малювання фігур</title>
+    <style type="text/css">
+        body {
+            font-size: 50px;
+            color: rgb(255, 255, 0);
+            background-color: black;
+            text-align: center;
+        }
+
+        #train {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="numFigures">Введіть кількість фігур:</label>
+    <input type="number" id="numFigures" min="1" value="10">
+    <button onclick="drawRandomFigures()">Малювати фігури</button>
+
+    <canvas id="myCanvas" width="600" height="400" style="border:1px solid #ccc;"></canvas>
+
+    <script>
+        // Отримати елемент canvas та контекст малювання
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Функція для генерації випадкового кольору
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Функція для малювання довільних фігур
+        function drawRandomFigures() {
+            var numFigures = document.getElementById("numFigures").value;
+            numFigures = parseInt(numFigures);
+
+            if (isNaN(numFigures) || numFigures < 1) {
+                alert("Введіть коректне число більше 0.");
+                return;
+            }
+
+            // Очищення canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (var i = 0; i < numFigures; i++) {
+                // Випадкові координати та розміри фігури
+                var x = Math.random() * canvas.width;
+                var y = Math.random() * canvas.height;
+                var size = Math.random() * 50 + 20; // розмір від 20 до 70
+                var color = getRandomColor();
+
+                // Випадковий вибір між трикутником і колом
+                if (Math.random() > 0.5) {
+                    // Трикутник
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x + size, y);
+                    ctx.lineTo(x + size / 2, y - size);
+                    ctx.closePath();
+                    ctx.fillStyle = color;
+                    ctx.fill();
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

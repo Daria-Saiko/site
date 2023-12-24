@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H\W</title>
+    <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+    <script>
+        function quadratic_equation() {
+            let money = document.qef.money.value;
+
+            let sol = document.getElementById("qe_sol");
+            if (money < 50 || money > 3000) {
+                string =
+                    "На жаль, Ви  можете зняти гроші на суму від 50 грн. до 3000 грн."
+                    ;
+            } else if (money % 50 == 0) {
+                string = "Візміть ваши кошти " + money + " грн";
+            } else {
+
+                string =
+                    "Візміть ваши кошти " +
+                    (money - (money % 50)) +
+                    " грн, та комісія складатиме " +
+                    (money % 50)
+                    ;
+            }
+
+            sol.innerHTML = string;
+        }
+    </script>
+    <div>
+        <div class="form_stile">
+            <p>
+                Яку суму хочете зняти?
+            </p>
+            <form name="qef" action="javascript:quadratic_equation()">
+                <input class="cqe" name="money" type="text" value="1" size="4" /> грн
+                <input class="btn" type="submit" value="Розрахувати" />
+                <input class="btn" type="reset" name="reset" value="Reset" />
+            </form>
+
+            <span id="qe_sol"></span>
+        </div>
+    </div>
+</body>
+
+</html>

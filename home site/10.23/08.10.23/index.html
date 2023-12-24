@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08.10.23</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      p {
+        color: #000;
+        background-color: yellow;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /*
+
+      if ("0") {
+        alert("Рядок з нулем");
+      }
+      if (" ") {
+        alert("Рядок з порожньо");
+      }
+      if (0) {
+        alert("Число 0");
+      }
+      let Name = prompt("Чиї штани на всі боки рівні ?", "");
+      if (Name == "Піфагора") {
+        alert("Так це вірно");
+      } else {
+        alert("Не правильно ,вони Піфагорові");
+      }
+
+      let numberСheck = +prompt("введите число ", "34");
+      if (numberСheck > 100) {
+        alert("значение больше ста");
+      } else if (numberСheck < 100) {
+        alert("значение меньше ста");
+      } else {
+        alert("100");
+      }
+
+      let numberOne = +prompt("введите число ", "34");
+      let numberTwo = +prompt("введите число ", "34");
+      let numberThree = +prompt("введите число ", "34");
+      let result = (numberOne + numberTwo) * numberThree;
+      if (result < 300) {
+        alert("очень мало");
+      } else if (result > 300) {
+        alert("очень много");
+      } else {
+        alert("300");
+      }
+*/
+      let numberOne = +prompt("введите первое число ", "34");
+      let numberTwo = +prompt("введите второе число ", "34");
+      let numberThree = +prompt("введите третье число ", "34");
+      let dscreminant = numberTwo * numberTwo - 4 * numberOne * numberThree;
+
+      document.write("<p>" + " дискримінант = " + dscreminant + "</p>");
+
+      if (dscreminant > 0) {
+        document.write("<p>" + " є два " + "</p>");
+        document.write(
+          "<p>" +
+            "x1 = " +
+            (numberTwo * -1 + Math.sqrt(dscreminant)) / (2 * numberOne) +
+            "</p>"
+        );
+        document.write(
+          "<p>" +
+            "x2 = " +
+            (numberTwo * -1 - Math.sqrt(dscreminant)) / (2 * numberOne) +
+            "</p>"
+        );
+      } else if (dscreminant == 0) {
+        document.write("<p>" + " є один " + "</p>");
+        document.write(
+          "<p>" +
+            ("x1 = " + (numberTwo * -1 + sqrt(dscreminant)) / 2) * numberOne +
+            "</p>"
+        );
+      } else {
+        document.write("<p>" + " не має " + "</p>");
+      }
+      /*HW
+      Напишіть код, який буде запитувати логін користувача.
+      Використовуючи дані вимоги:
+      Запросити логін користувача: якщо він буде User, то пропустити далі;
+      якщо скасування написати «вхід скасований»; якщо інший логін: написати «користувач невизначений»;
+      після цього запросити «пароль»: щодо скасування написати «вхід скасований»;
+      якщо пароль «password» написати «Ласкаво просимо!», інакше «Пароль невірний!»
+
+      let UserLogin = prompt("введіть логін користувача ");
+      let UserPasword;
+      if (UserLogin == "User") {
+        UserPasword = prompt("введіть пароль");
+        if (UserPasword == "password") {
+          alert("Ласкаво просимо!");
+        } else if (UserPasword == null) {
+          alert("Пароль невірний!");
+        }
+      } else if (UserLogin == null) {
+        alert("вхід скасований");
+      } else {
+        alert("користувач невизначений");
+      }*/
+    </script>
+  </body>
+</html>

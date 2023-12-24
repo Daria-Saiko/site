@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      //1
+      function showHi() {
+        alert("Привіт!");
+      }
+      // тепер досить у коді використати ім'я функції і вона буде запущена:
+      showHi();
+
+      //2
+      function showHi() {
+        let hi = "Привіт всім від Функції!"; // локальна змінна
+        alert(hi);
+      }
+      showHi(); // ‘ Привіт всім від функції '
+      alert(hi);
+      //3
+      let userName = "ДокторХто";
+      function showHi() {
+        let hi = "Привіт тобі, " + userName + ", від Функції!"; // зовнішня змінна
+        alert(hi);
+      }
+      showHi();
+
+      //4
+      let userName = "ДокторХто";
+      function showHi() {
+        let hi = "Привіт тобі, " + userName + ", від Функції!"; // зовнішня змінна
+        userName = "КапітанОчевидність";
+        alert(hi);
+      }
+      showHi();
+      alert(userName);
+
+      //5 (hw)
+      function checkSum(sum) {
+        if (sum > 1000) {
+          return true;
+        } else {
+          return confirm(
+            "Для знижки вам необхідно вибрати ще товарів на сумму більше 1000 грн. Продовжимо?"
+          );
+        }
+      }
+      let sum = +prompt("Вкажіть суму покупки?");
+      if (checkSum(sum)) {
+        alert("Знижка 20% забезпечена!");
+      } else {
+        alert("Нічого, у нас все одно низькі ціни!");
+      }
+
+      //6
+      function checkMax(number1, number2) {
+        if (number1 > number2) {
+          return number1;
+        } else {
+          return number2;
+        }
+      }
+      let number1 = +prompt("Вкажіть 1 число");
+      let number2 = +prompt("Вкажіть 2 число");
+      alert(checkMax(number1, number2));
+
+      
+
+      //7
+      function power(x, n) {
+        if (n >= 1) {
+          let res = x;
+          for (let i = 1; i < n; i++) {
+            res = res * x;
+          }
+          return res;
+        } else {
+          return "помилка";
+        }
+      }
+      let x = +prompt("Вкажіть число");
+      let n = +prompt("Вкажіть степінь числа");
+      alert(power(x, n));
+      */
+
+      //8
+      function checkSum(sum) {
+        if (sum > 1000) {
+          return true;
+        } else {
+          return confirm(
+            "Для знижки вам необхідно вибрати ще товарів на сумму більше 1000 грн. Продовжимо?"
+          );
+        }
+      }
+      let sum = +prompt("Вкажіть суму покупки?");
+      if (checkSum(sum)) {
+        alert("Знижка 20% забезпечена!");
+      } else {
+        alert("Нічого, у нас все одно низькі ціни!");
+      }
+    </script>
+  </body>
+</html>

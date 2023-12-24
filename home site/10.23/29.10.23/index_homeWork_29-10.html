@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+  <script>
+    function quadratic_equation() {
+      let sol = document.getElementById("qe_sol");
+      let min = Number(document.qef.money.value);
+      let max = document.qef.b.value;
+      let sum = 0;
+      let count;
+      for (count = min; count <= max; count++) {
+        sum += count;
+      }
+      string = `Сума чисел у діапазоні від ${min} до ${max} = ${sum} `;
+
+      sol.innerHTML = string;
+    }
+  </script>
+  <div class="form_stile">
+    <p>
+      Сума чисел у діапазоні
+    </p>
+    <form name="qef" action="javascript:quadratic_equation()">
+      Введіть нижню межу діапазону <input class="cqe" name="money" type="text" value="1" size="4" />. Введіть верхню
+      межу діапазону <input class="cqe" name="b" type="text" value="2" size="4" />
+      <input class="btn" type="submit" value="Розрахувати" />
+      <input class="btn" type="reset" name="reset" value="Reset" />
+    </form>
+
+    <span id="qe_sol"></span>
+  </div>
+</body>
+
+</html>

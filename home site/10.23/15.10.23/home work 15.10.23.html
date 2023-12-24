@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H\W</title>
+  <link rel="stylesheet" href="../../../css/jscss.css" />
+</head>
+
+<body>
+  <script>
+    function quadratic_equation() {
+      let userAge = document.qef.a.value;
+      let sol = document.getElementById("qe_sol");
+
+      if (userAge >= 18 && userAge <= 100) {
+        if (userAge % 10 === 1 && userAge % 100 !== 11) {
+          string = `Вам ${userAge} рік .Ласкаво просимо`;
+        } else if (
+          userAge % 10 >= 2 &&
+          userAge % 10 <= 4 &&
+          (userAge % 100 < 10 || userAge % 100 >= 20)
+        ) {
+          string = `Вам ${userAge} роки.Ласкаво просимо`;
+        } else {
+          string = `Вам ${userAge} років.Ласкаво просимо`;
+        }
+      } else {
+        if (userAge % 10 === 1 && userAge % 100 !== 11) {
+          string = `Вам ${userAge} рік.Доступ заборонено`;
+        } else if (userAge % 10 >= 2 && userAge % 10 <= 4
+          && (userAge % 100 < 10 || userAge % 100 >= 20)) {
+          string = `Вам ${userAge} роки.Доступ заборонено`;
+        } else {
+          string = `Вам ${userAge} років .Доступ заборонено`;
+        }
+
+
+      } sol.innerHTML = string;
+    }
+  </script>
+  <div>
+    <div class="form_stile">
+      <p>
+        Ваш вік
+      </p>
+      <form name="qef" action="javascript:quadratic_equation()">
+        <input class="cqe" name="a" type="text" value="1" size="8" />
+        <input class="btn" type="submit" value="Перевірити" />
+        <input class="btn" type="reset" name="reset" value="Reset" />
+      </form>
+      Висновок:
+      <span id="qe_sol">Перевіряємо</span>
+    </div>
+  </div>
+</body>
+
+</html>
